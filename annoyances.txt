@@ -1,1 +1,292 @@
+[Adblock Plus 2.0]
+! Title: ajai's Annoyance List
+! Description: Hide annoyances and extraneous page elements
+! Homepage: https://github.com/spongebro35/filterlists
+! Expires: not defined (update frequency)
+! Version: 14 July 2024
+! Syntax: AdBlock
 
+! General
+-push-notifications/$script
+||cdn.carrotquest.app^$3p
+||cdn.pn.vg^$3p
+||hlsmedia.gannett-cdn.com^$3p
+||interactive.guim.co.uk
+##[class*="sponsorlink"]
+||gizmodo.com/embed/comments$subdocument
+||pomcor.com/wp-content/uploads/2015/05/stars_background.jpg$image
+||www.rugfreecoins.com/img/*4.gif$image
+||aeon.co/_next/static/chunks/NewsletterPopup.
+||aeon.co/_next/static/chunks/SupportBannerHeader.
+||www.fedscoop.com/advertising/$subdocument
+||www.playwidget.stuff.co.nz$subdocument
+||hodgef.com/static/sponsor.html$subdocument
+||garry.windscribe.com^
+||circleid.com/images/industry/sponsor$image
+||crypto.games/banners$image
+||fmoviesz.to/assets/_bnx$image
+
+! SOCIAL BUTTONS
+##a[href^="https://twitter.com/intent/tweet"]
+##a[href^="https://www.facebook.com/login.php"]
+! ##a[href^="mailto:"]
+##.subscribe-widget
+##.facebook-icon
+##.flipboard-icon
+||*icon-fb.png$image
+||*icon-tw.png$image
+##.icon-twitter
+! https://github.com/yokoffing/filterlists/issues/100
+! ##.follow
+adguard.com##.content-social
+! https://github.com/easylist/easylist/issues/16243
+livescience.com##.buttons-social
+kellegram.xyz##.socials
+
+! AUDIO/VIDEO PLAYERS
+! ||remixd.com^$3p
+! https://www.gq.com/story/jason-belmonte-bowling-profile
+||player.cnevids.com^
+! https://www.ghacks.net/2023/07/04/firefox-115-new-esr-base-and-some-add-ons-may-be-blocked-from-running-on-certain-sites
+||readaloud.googleapis.com^$script
+! Block players that usually play content not directly related to the page
+||redvideo.io^$domain=~redvideo.io
+!||cnevids.com^$3p,domain=~gq.com
+||kaltura.com^$3p,domain=~financialaidtv.com
+! https://github.com/yokoffing/filterlists/issues/117
+@@||cdnapi-legacy.kaltura.com^$xhr,domain=yle.fi
+! https://www.appdate.lk/technology/2023-browser-showdown/
+||beyondwords.io^
+||code.responsivevoice.org^
+! https://www.wyff4.com/article/videocast-morning-storms/44780778
+! ||htvapps.com^
+||hearst.io^
+@@||htv-streaming-otfp.hearst.io
+@@||nitehawk.hearst.io
+||hearstapps.com^
+||htvtools.us^
+! https://www.delish.com/food-news/a44120266/mcdonalds-grimace-shake/
+||hearstgames.com^
+@@||hips.hearstapps.com^$image
+! ||hearstapps.com^
+! ||oply.hearstapps.com^
+! ||assets.hearstapps.com^
+delish.com##.video-player, .journey-unblur-content
+! Brightcove
+||brightcove.net^$3p
+@@||brightcove.^$xhr
+@@||media.brightcove.com^$image
+@@||media.brightcove.com^$media,domain=players.brightcove.net
+@@||players.brightcove.net^$script
+! JW Player
+||entitlements.jwplayer.com^$important
+||jwpsrv.com^$3p
+!||jwplayer.com^$3p,domain=~menshealth.com
+@@||cdn.jwplayer.com^$xhr
+@@||content.jwplatform.com^$xhr,script
+@@||jwpcdn.com/player/plugins/vast/$script
+@@||jwpcdn.com^$font
+!!! @@||jwpltx.com^$image
+@@||jwpsrv.com^$subdocument
+! https://www.news24.com
+! paywalled audio player
+||oovvuu.io^$3p
+||oovvuu.media^$3p
+
+! https://github.com/brave/adblock-lists/blob/master/brave-lists/brave-ios-specific.txt
+! Invideo ads
+||api.fw.tv^
+||avantisvideo.com/avm/js/video-loader.js$script,3p
+||c.jsrdn.com^$script,domain=muscleandfitness.com
+||channelexco.com/player/$3p
+||connatix.com^$script,3p
+||delivery.vidible.tv/jsonp/
+||dywolfer.de^
+||embed.sendtonews.com^$3p
+||fqtag.com^$3p
+||fwcdn1.com/js/fwn.js
+||fwcdn1.com/js/storyblock.js
+||fwcdn2.com^$3p
+||go.trvdp.com^
+||jwpcdn.com^$script,domain=bgr.com|dexerto.com|zimbio.com
+||jwplayer.com/players/$script,domain=ginx.tv
+||live.primis.tech^$3p
+||play.anyclip.com^$script,3p
+||play.springboardplatform.com^
+||playbuzz.com/embed/$script,3p
+||playbuzz.com/player/$script,3p
+||player.anyclip.com/anyclip-widget/$script,3p
+||player.avplayer.com^$3p
+||player.ex.co^$script,3p
+||player.sendtonews.com^$3p
+||players.brightcove.net^$script,domain=businessinsider.com.au|gizmodo.com.au|kotaku.com.au|lifehacker.com.au|pedestrian.tv
+||playwire.com/bolt/js/$script,3p
+||rumble.com^$domain=tiphero.com
+||services.brid.tv^$script,domain=spin.com
+||sportrecs.com/redirect/embed/
+||ultimedia.com/js/common/smart.js$script,3p
+||vidazoo.com/basev/$script,3p
+||video-api.yql.yahoo.com^*/wf-channel=related-videos?
+||vidora.com^$3p
+||viewdeos.com^$script,3p
+||vms-players.minutemediaservices.com^$script,3p
+||voqally.com/hub/app/
+||vplayer.newseveryday.com^
+||widgets.outbrain.com^$domain=cnn.com
+
+
+! from https://github.com/DandelionSprout/adfilt/blob/master/AnnoyancesList
+! AAB prompts
+/^https://[a-z]{8,25}\.com/v2[a-zA-Z0-9_-]{70,}$/$xmlhttprequest,ping,3p,important
+
+! from https://github.com/uBlock-user/uBO-Personal-Filters/blob/master/uPF.txt
+! Be sure to add scriplets https://github.com/uBlock-user/uBO-Personal-Filters#requirements
+dnsleaktest.com##p[style="padding-bottom: 100px"]:remove()
+duckduckgo.com##.onboarding-ed, .tag-home__wrapper, .footer, .ia-modules, .badge-link
+fandom.com###WikiaBar, #WikiaRailWrapper, .banner-notifications-placeholder, .aff-unit__disclaimer-message, .mw-notification-area:remove()
+fmovies.*,ffmovies.*##.text, .widget:nth-of-type(5), #tags, .hidden-sm.widget, .hd-buttons.row, .col-right, .widget:nth-of-type(4), [href*="twitter.com"], div[data-go="#comment"], .socials, .twitter-follow-button, [href*="/redirect"], .streamhd, .stream4k, .home-socials, .addthis_native_toolbox, #fb-root, .alert, [href^="https://dynamicadx.com/"], #comment:remove()
+ghacks.net###comments, [href*="/#comments"], .tag-sponsored, [id^="snhb-snhb_ghacks_bottom-"], .widget_stackcommerce_widget:remove()
+github.com##.survey-container, .js-notice-dismiss, .mb-4.bg-white, .code-navigation-banner, .js-notice:remove()
+www.google.*###prm-pt, .b2hzT, .exp-outline, [id^="ed_"], [id^="eob_"], [title*="Share"], #gws-output-pages-elements-homepage_additional_languages__als, #wmxmsg, #prm, .uU7dJb,[class$="middle-slot-promo"]:remove()
+mega.nz##.ads-left-block, .ads-right-block, .active.top-login-warning, .red.download-button.button, .checkbox-bl.download:remove()
+!reddit.com##.promotedlink, [id^="ad_"], #redesign-beta-optin-btn, [href="/premium"], .comment-visits-box, .premium-banner-outer, .share, #adblock-test, .giftgold, .snoovatar-link, .give-gold-button, .bottom > .spacer, .happening-now-wrap, .hohoho-header, .hohoho, #gtm-jail:remove()
+speedtest.net##.high-placeholder.pure-u-1, .u-c.pure-u-custom-ad-rectangle, .u-c.pure-u-custom-ad-skyscraper, .top-placeholder.pure-u-1, .eot-dd-content, .u-c.pure-u-1-4:nth-of-type(1) > ul.menu-footer:nth-of-type(2), .lowerboard-content:remove()
+speed.cloudflare.com##.mapboxgl-map:upward(1):remove()
+torrentfreak.com##.widget_text, .o-widget--rotated.o-widget, .comments, .footer__widget--stats, .preview-article__comments, .hero__comments, .socials:remove()
+translate.google.com##.notification-area,.gt-cc:remove()
+
+! GOOGLE
+! Google consent dialog, "before you continue"
+www.google.*##^script:has-text(consentCookiePayload)
+www.google.*##+js(acis, document.cookie, YES+)
+google.*##+js(aeld, DOMContentLoaded, CONSENT)
+! block subdomain request can generate breakage - disable network filter if you have any breakage
+||consent.google.com^
+! Google "People also searched for"
+google.*##[id^="eob_"]
+! Annoying "Sign-in with Google" pop-ups
+! https://www.troddit.com/r/brave_browser/comments/uzzmp7/is_it_possible_block_the_sign_in_with_google/iaeqazb/
+! https://www.bleepingcomputer.com/news/security/duckduckgo-now-blocks-google-sign-in-pop-ups-on-all-sites/
+! https://github.com/yokoffing/filterlists/issues/75
+!||accounts.google.com/gsi/client$script,3p
+||accounts.google.com/gsi/$xhr,script,3p,domain=~auth.23andme.com
+
+! YOUTUBE
+! YT consent
+youtube.com##+js(set, ytInitialData.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer.forceConsent, false)
+youtube.com##+js(json-prune, [].response.topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+youtube.com##+js(json-prune, topbar.desktopTopbarRenderer.interstitial.consentBumpRenderer)
+! YT login
+youtube.com##+js(set, ytInitialPlayerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(set, ytInitialData.overlay.upsellDialogRenderer.isVisible, false)
+youtube.com##+js(json-prune, [].playerResponse.auxiliaryUi.messageRenderers.upsellDialogRenderer)
+
+! YouTube delay on Firefox
+! https://www.ghacks.net/2023/11/20/youtube-video-loading-delayed-fix-inside/
+!#if env_firefox
+www.youtube.com##+js(nano-stb, resolve(1), 5000, 0.001)
+!#endif
+
+
+! BING
+! Hide rebate
+bing.com##.rebateGlobalDecoration
+! Hide lock icon near results
+bing.com##.secure_icon
+! Was this response helpful?
+bing.com##.survey-opt-in-wrapper
+! Search box: Microsoft Suggests, Try the new copilot
+bing.com###sa_zis_Banner
+! Search box: Chat with Copilot popup
+bing.com##.popup
+! Related search module
+bing.com##.b_rrsr
+bing.com###relatedSearchesLGWContainer
+! Images overtaking search results
+bing.com##.b_imgsmall.b_imgans.b_mopb.b_mop.b_ans
+! Videos overtaking search results
+bing.com##.b_vidAns.b_mop.b_ans
+! People also ask
+bing.com##.df_alaskcarousel.rqnaContainerwithfeedback
+! Explore more from Wikipedia
+bing.com##.b_remod
+! Related searches near page numbers
+bing.com###brsv3
+! Explore beside Video result
+bing.com##.slide-in
+! Chat with copilot, top right
+bing.com###b_op_anch
+bing.com###bnp\.nid\.63928
+! Copilot chat box at bottom of page
+bing.com##.wpt_bc_container
+! "Related news" in News module
+bing.com##.rns_more
+! "Explore more news" in News module
+bing.com##.nart_bak.nart_content
+! "Trending searches you might like" in search results
+bing.com###b_mrs_DynamicMRS
+! Stories, AI generated slide shows
+bing.com##.sto_slides
+
+! Source: https://github.com/letsblockit/letsblockit/issues/642
+! "Copilot" in menu next to "All" and "News"
+!bing.com###b-scopeListItem-conv
+! Deep search / Copilot icon next to the search box
+bing.com##.b_phead_chat_link
+! Search box copilot
+bing.com##.bordertop
+! "Chat" button near page numbers
+bing.com##.b_pag_lets_chat
+! Hide related and recommended content
+! Most of "explore", "people also", "related search" sections and side panel
+!bing.com###b_context
+! Hide most modules around search results
+!bing.com##.b_ans
+! Recommended section in the search box. Requires style fix to prevent expanding of the search box
+bing.com##.rs_drw
+bing.com###sa_requery
+! Related to recent searches in the search box
+bing.com###sa_zis_SSE
+! "Explore further" sublinks
+bing.com##.scs_child_rpr
+! "Tags"
+!bing.com##.batg
+! Side links widget
+!bing.com###wikiWidgetContainer
+! Hide Jump to search icon
+bing.com###mfa_root
+! Hide quick highlight (lightbulb) icons
+bing.com##.scs_icn
+! "Rewards" alert
+bing.com###id_mobbubpos
+! Searches you might like
+www.bing.com###b_mrs_BelowBOPAds
+! Top songs
+www.bing.com##.l_ecrd_twoimgset
+
+! Linkedin
+! Suggested Posts
+linkedin.com##.relative:has-text(Suggested)
+
+! Github
+! Hide prompts to test copilot 
+github.com##react-app[app-name="react-code-view"] button[data-testid="copilot-popover-button"]
+github.com##.js-unwatch-suggestions
+
+! Unsplash+ images
+unsplash.com##img[src^="https://plus.unsplash.com/"]:upward(figure)
+
+
+! import Clean Reading Experience list
+9to5mac.com##p strong:has-text(/^Related/):upward(p)
+aljazeera.com##.more-on
+businessinsider.com##p > strong:has-text(/^Read More:/):upward(p)
+cnn.com##.el__leafmedia--standard.el__leafmedia--factbox.el__leafmedia
+cnn.com##.zn-body__read-all > div.el__embedded--standard.el__embedded > .el__article--embed.el__storyelement--standard
+cnn.com##.l-container > .el__embedded--standard.el__embedded
+ghacks.net##p strong:has-text(/^Now You/):upward(p)
+ghacks.net##p strong:has-text(/^Tip/):upward(p)
+theverge.com###kYgI66 > .c-read-more
+vox.com##.c-read-more
+vox.com##.c-article-footer
+wired.com##.callout--has-top-border.gYlOfh.GenericCalloutWrapper-zksK
