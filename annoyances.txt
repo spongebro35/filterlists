@@ -1,5 +1,5 @@
 [Adblock Plus 2.0]
-! Title: ajai's Annoyance List
+! Title: spongebro's Annoyance List
 ! Description: Hide annoyances and extraneous page elements
 ! Homepage: https://github.com/spongebro35/filterlists
 ! Expires: not defined (update frequency)
